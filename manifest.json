@@ -1,0 +1,21 @@
+{
+"background_page": "background.html",
+
+"permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "notifications",
+    "contextMenus"
+],
+
+"content_scripts": [
+    {
+        "matches": ["http://*/*","https://*/*"],
+        "js": ["jquery.js", "vertical.js","convolution.js","SetRadius.js","GradientComputation.js","CircleCreation.js" ,"DivideCircle.js","ColorGradient.js","ColorMap.js","RGBtoLAB.js","CFeatureCombination.js","nonmaxSuppression.js"],
+        "all_frames": false
+    }
+],
+"name" : "boundary detection using color with 4 worker thread",
+"version" : "1.0"
+}
